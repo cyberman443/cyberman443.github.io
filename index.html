@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberman443 Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css" integrity="sha512-JwFmbwnIodmKjOQgSbc8Z2EHeq5eOyy9xTtDW2zAxFBeSxWL2gZdzJcPlTpFmHbb1pz5jlF30qfzmZGKl7Kr6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js" integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        /* Global styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: #0a0a0a; /* Dark background for better contrast */
+            font-family: "Courier New", monospace;
+            color: rgba(255, 165, 0, 0.8); /* Fire-like color */
+        }
+
+        /* Center sections and set width to 60% of screen */
+        .section-full-width {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section-centered {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0);
+            z-index: 10;
+        }
+
+                /* Stylish section titles with bottom border */
+                .section-title {
+                    font-size: 3rem;
+                    font-weight: bold;
+                    color: #ff9900; /* Fire-like color */
+                    position: relative;
+                    display: inline-block;
+                }
+        
+                .section-title::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #ff9900; /* Matching border color */
+                    transition: width 0.3s ease;
+                    transform: scaleX(1);
+                    transform-origin: bottom right;
+                }
+        
+
+        /* Custom Styles for hover effects */
+        .zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        
+
+        /* Additional grading effects */
+        .group img {
+            filter: brightness(0.95) contrast(1.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Add an enhanced hover effect */
+        .group:hover img {
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        /* Gallery image styles */
+        .group img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+            object-fit: cover;
+        }
+
+        .group:hover img {
+            transform: scale(1.05);
+        }
+
+    </style>
+
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-black oppacity-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold">
+                <a href="#home" class="text-white">Cyberman443</a>
+            </div>
+            <nav>
+                <ul class="flex space-x-8 text-lg">
+                    <li><a href="#projects" class="hover:text-teal-400 transition">Projects</a></li>
+                    <li><a href="#gallery" class="hover:text-teal-400 transition">Gallery</a></li>
+                    <li><a href="#social" class="hover:text-teal-400 transition">Social</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-between bg-cover bg-center text-start section-full-width" style="background-image: url('https://source.unsplash.com/1600x900/?technology');">
+        <!-- Dark Overlay for Better Text Visibility -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Left Side (Text Section) -->
+        <div class="relative z-10 text-white px-6 sm:px-12 w-full lg:w-1/2">
+            <h1 class="text-4xl sm:text-6xl font-bold mb-4 leading-tight">
+                Hi, I’m Cyberman443. <br/>
+                A passionate software developer.
+            </h1>
+            <p class="text-lg sm:text-xl mb-8 leading-relaxed">
+                Creating innovative solutions with cutting-edge technologies. I specialize in building scalable, efficient, and user-friendly applications.
+                Let's explore the world of software development together and create something impactful.
+            </p>
+            <a href="#projects" class="bg-teal-400 text-black px-6 py-3 text-xl rounded-full hover:bg-teal-500 transition duration-300 transform hover:scale-105">
+                Explore My Work
+            </a>
+        </div>
+
+        <!-- Right Side (Image Section) -->
+        <div class="hidden lg:block relative z-10 w-full lg:w-1/2">
+            <img src="https://source.unsplash.com/1600x900/?programming,technology" alt="Programming Image" class="w-full h-full object-cover rounded-l-lg shadow-lg"/>
+        </div>
+    </section>
+
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 px-6 text-center section-centered">
+
+        <!-- Title with Stylish Border -->
+        <h2 class="text-4xl font-bold text-teal-600 mb-8 relative inline-block uppercase tracking-wide">
+            About Me
+            <div class="absolute left-0 bottom-0 w-1/2 h-1 bg-teal-600 rounded-full mx-auto mt-2"></div>
+        </h2>
+
+        <!-- Professional Description -->
+        <p class="text-lg font-light mb-12 max-w-3xl mx-auto leading-relaxed text-white">
+            I am a <strong class="font-semibold text-teal-600">Full Stack Web Developer</strong> with a solid foundation in both front-end and back-end technologies. 
+            My expertise spans a wide range of languages and frameworks, including <strong class="text-teal-500">CSS</strong>, <strong class="text-teal-500">Tailwind</strong>, <strong class="text-teal-500">Bootstrap</strong>, 
+            <strong class="text-teal-500">Ajax</strong>, <strong class="text-teal-500">React</strong>, <strong class="text-teal-500">PHP</strong>, <strong class="text-teal-500">Laravel</strong>, <strong class="text-teal-500">Python</strong>, 
+            <strong class="text-teal-500">Django</strong>, <strong class="text-teal-500">Flask</strong>, and <strong class="text-teal-500">FastAPI</strong>.
+
+            I specialize in building scalable, efficient, and user-friendly web applications, leveraging modern tools and technologies to deliver high-quality solutions. 
+            My experience is complemented by a deep interest in utilizing <strong class="text-teal-500">AI tools</strong> to enhance development speed and efficiency, 
+            allowing me to rapidly iterate and build applications that meet the needs of today’s fast-paced digital world.
+
+            With a passion for continuous learning and a proactive approach to problem-solving, I am committed to creating seamless user experiences and 
+            robust back-end systems that drive business success.
+        </p>
+
+        <!-- Tech Stack Icons -->
+        <div class="flex flex-wrap gap-8 justify-center align-center text-xl mb-12 w-1/2 ml-auto mr-auto">
+
+            <!-- React -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <i class="fab fa-react text-3xl text-teal-500"></i>
+                <span>React</span>
+            </span>
+
+            <!-- JavaScript -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <i class="fab fa-js-square text-3xl text-teal-500"></i>
+                <span>JavaScript</span>
+            </span>
+
+            <!-- Tailwind -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <img src="https://img.shields.io/badge/-TailwindCSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="TailwindCSS" class="w-10 h-10"/>
+                <span>Tailwind CSS</span>
+            </span>
+
+            <!-- Bootstrap -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <img src="https://img.shields.io/badge/-Bootstrap-563D7C?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" class="w-10 h-10"/>
+                <span>Bootstrap</span>
+            </span>
+
+            <!-- Ajax -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <img src="https://img.shields.io/badge/-AJAX-FFCC00?style=flat-square&logo=ajax&logoColor=white" alt="Ajax" class="w-10 h-10"/>
+                <span>AJAX</span>
+            </span>
+
+            <!-- PHP -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <i class="fab fa-php text-3xl text-teal-500"></i>
+                <span>PHP</span>
+            </span>
+
+            <!-- Laravel -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <img src="https://img.shields.io/badge/-Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel" class="w-10 h-10"/>
+                <span>Laravel</span>
+            </span>
+
+            <!-- Python -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <i class="fab fa-python text-3xl text-teal-500"></i>
+                <span>Python</span>
+            </span>
+
+            <!-- Django -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <img src="https://img.shields.io/badge/-Django-092E20?style=flat-square&logo=django&logoColor=white" alt="Django" class="w-10 h-10"/>
+                <span>Django</span>
+            </span>
+
+            <!-- Flask -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <img src="https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask" class="w-10 h-10"/>
+                <span>Flask</span>
+            </span>
+
+            <!-- FastAPI -->
+            <span class="flex items-center space-x-2 transition-all duration-300 hover:text-teal-500 hover:scale-110">
+                <img src="https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" class="w-10 h-10"/>
+                <span>FastAPI</span>
+            </span>
+        </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-gray-800 text-center section-full-width">
+        <h2 class="text-3xl font-bold mb-8 section-title">My Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-6">
+
+            <!-- Project 1 -->
+            <div class=" p-6 rounded-lg ">
+                <h3 class="text-2xl font-semibold mb-4 text-teal-400">Project One</h3>
+                <p class="text-gray-400 mb-4">A full-stack e-commerce platform built with React, Node.js, and MongoDB. It features real-time user authentication and dynamic product filtering.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <img src="https://via.placeholder.com/400" alt="Project 1 Screenshot 1" class="w-full h-48 object-cover rounded-md">
+                    <img src="https://via.placeholder.com/400" alt="Project 1 Screenshot 2" class="w-full h-48 object-cover rounded-md">
+                    <img src="https://via.placeholder.com/400" alt="Project 1 Screenshot 3" class="w-full h-48 object-cover rounded-md">
+                    <img src="https://via.placeholder.com/400" alt="Project 1 Screenshot 4" class="w-full h-48 object-cover rounded-md">
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class=" p-6 rounded-lg ">
+                <h3 class="text-2xl font-semibold mb-4 text-teal-400">Project Two</h3>
+                <p class="text-gray-400 mb-4">A weather forecasting app using React and an external weather API to display real-time data with interactive charts and forecasts.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <img src="https://via.placeholder.com/400" alt="Project 2 Screenshot 1" class="w-full h-48 object-cover rounded-md">
+                    <img src="https://via.placeholder.com/400" alt="Project 2 Screenshot 2" class="w-full h-48 object-cover rounded-md">
+                    <img src="https://via.placeholder.com/400" alt="Project 2 Screenshot 3" class="w-full h-48 object-cover rounded-md">
+                    <img src="https://via.placeholder.com/400" alt="Project 2 Screenshot 4" class="w-full h-48 object-cover rounded-md">
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class=" p-6 rounded-lg ">
+                <h3 class="text-2xl font-semibold mb-4 text-teal-400">Project Three</h3>
+                <p class="text-gray-400 mb-4">A task management tool built with Node.js and Express, enabling users to organize tasks with due dates and reminders in a calendar view.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <img src="https://via.placeholder.com/400" alt="Project 3 Screenshot 1" class="w-full h-48 object-cover rounded-md">
+                    <img src="https://via.placeholder.com/400" alt="Project 3 Screenshot 2" class="w-full h-48 object-cover rounded-md">
+                    <img src="https://via.placeholder.com/400" alt="Project 3 Screenshot 3" class="w-full h-48 object-cover rounded-md">
+                    <img src="https://via.placeholder.com/400" alt="Project 3 Screenshot 4" class="w-full h-48 object-cover rounded-md">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 text-center bg-gray-900 section-centered">
+        <h2 class="text-3xl font-bold mb-8 section-title">Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6">
+
+            <!-- Gallery Image 1 -->
+            <div class="group relative">
+                <a href="https://images.pexels.com/photos/712104/pexels-photo-712104.jpeg" data-lightbox="gallery" data-title="Gallery Image 1">
+                    <img src="https://images.pexels.com/photos/712104/pexels-photo-712104.jpeg" alt="Gallery Image 1" class="w-full h-auto object-cover rounded-lg transition-transform transform group-hover:scale-105">
+                </a>
+            </div>
+
+            <!-- Gallery Image 2 -->
+            <div class="group relative">
+                <a href="https://images.pexels.com/photos/2529142/pexels-photo-2529142.jpeg" data-lightbox="gallery" data-title="Gallery Image 2">
+                    <img src="https://images.pexels.com/photos/2529142/pexels-photo-2529142.jpeg" alt="Gallery Image 2" class="w-full h-auto object-cover rounded-lg transition-transform transform group-hover:scale-105">
+                </a>
+            </div>
+
+            <!-- Gallery Image 3 -->
+            <div class="group relative">
+                <a href="https://images.pexels.com/photos/1601070/pexels-photo-1601070.jpeg" data-lightbox="gallery" data-title="Gallery Image 3">
+                    <img src="https://images.pexels.com/photos/1601070/pexels-photo-1601070.jpeg" alt="Gallery Image 3" class="w-full h-auto object-cover rounded-lg transition-transform transform group-hover:scale-105">
+                </a>
+            </div>
+
+            <!-- Gallery Image 4 -->
+            <div class="group relative">
+                <a href="https://images.pexels.com/photos/757886/pexels-photo-757886.jpeg" data-lightbox="gallery" data-title="Gallery Image 4">
+                    <img src="https://images.pexels.com/photos/757886/pexels-photo-757886.jpeg" alt="Gallery Image 4" class="w-full h-auto object-cover rounded-lg transition-transform transform group-hover:scale-105">
+                </a>
+            </div>
+
+            <!-- Gallery Image 5 -->
+            <div class="group relative">
+                <a href="https://images.pexels.com/photos/712092/pexels-photo-712092.jpeg" data-lightbox="gallery" data-title="Gallery Image 5">
+                    <img src="https://images.pexels.com/photos/712092/pexels-photo-712092.jpeg" alt="Gallery Image 5" class="w-full h-auto object-cover rounded-lg transition-transform transform group-hover:scale-105">
+                </a>
+            </div>
+
+            <!-- Gallery Image 6 -->
+            <div class="group relative">
+                <a href="https://images.pexels.com/photos/325944/pexels-photo-325944.jpeg" data-lightbox="gallery" data-title="Gallery Image 6">
+                    <img src="https://images.pexels.com/photos/325944/pexels-photo-325944.jpeg" alt="Gallery Image 6" class="w-full h-auto object-cover rounded-lg transition-transform transform group-hover:scale-105">
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Social Media & Contact Section -->
+    <section id="social" class="py-24 bg-gray-800 text-center section-full-width">
+        <h2 class="text-3xl font-bold mb-8 section-title">Let's Connect</h2>
+        <div class="flex justify-center space-x-6 text-3xl">
+            <a href="https://github.com/yourusername" class="text-white hover:text-teal-400 transition"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername" class="text-white hover:text-teal-400 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/yourusername" class="text-white hover:text-teal-400 transition"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-center py-6">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll-to-top button (optional) -->
+    <script>
+        // Smooth scrolling functionality for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
